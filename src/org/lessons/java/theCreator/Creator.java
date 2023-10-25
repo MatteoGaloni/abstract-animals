@@ -1,7 +1,15 @@
 package org.lessons.java.theCreator;
 
 public class Creator {
-    public Device create(String type, String name){
+
+    //Private Constructor
+    private Creator(){
+
+    }
+
+    //Method
+    //create a new instance Playstation/Dvd
+    public static Device create(String type, String name){
         if("Playstation".equals(type)) {
             return new PlayStation(name);
         } else if ("Dvd".equals((type))){

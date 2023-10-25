@@ -4,15 +4,19 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Creator creator = new Creator();
+        Device playStation1;
+        Device dvd1;
 
-        Device playStation = creator.create("Playstation", "PlayStation 2");
-        Device dvd = creator.create("Dvd", "Sony DVP-SR760H ");
+        playStation1 = Creator.create("Playstation", "Playstation3");
+        dvd1 = Creator.create("Dvd", "Sony DVP-SR760H");
 
-        playStation.playable();
-        playStation.stoppable();
-
-        dvd.playable();
-        dvd.stoppable();
+        if (playStation1 != null) {
+            playStation1.playable();
+            playStation1.stoppable();
+        }
+        if (dvd1 != null) {
+            dvd1.playable();
+            dvd1.stoppable();
+        }
     }
 }
