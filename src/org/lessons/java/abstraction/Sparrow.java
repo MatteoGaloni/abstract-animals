@@ -1,6 +1,6 @@
 package org.lessons.java.abstraction;
 
-public class Sparrow extends Animal{
+public class Sparrow extends Animal implements CanFly{
     public Sparrow(String name) {
         super(name);
     }
@@ -13,5 +13,10 @@ public class Sparrow extends Animal{
     @Override
     public void eat() {
         System.out.println("Worms");
+    }
+
+    @Override
+    public void fly() {
+        System.out.println("I am flying");
     }
 }
